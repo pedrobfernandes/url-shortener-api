@@ -1,0 +1,248 @@
+main
+{
+    width: var(--maximum-width);
+    margin: 0 auto;
+}
+
+.intro, .shorten,
+.statistics, .cta
+{
+    width: var(--maximum-width);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--half-gap);
+    gap: var(--half-gap);
+}
+
+.intro-content
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--main-gap);
+    order: 2;
+}
+
+.intro-content p
+{
+    color: var(--contrast-text-color);
+}
+
+.intro-image
+{
+    order: 1;
+}
+
+.intro-image img
+{
+    width: var(--maximum-width);
+}
+
+
+.intro-content .button-primary
+{
+    margin-bottom: calc(var(--main-gap) * 4);
+}
+
+.shorten
+{
+    position: relative;
+}
+
+
+.shorten-form
+{
+    width: calc(var(--maximum-width) - 10%);
+    display: flex;
+    flex-direction: column;
+    gap: var(--half-gap);
+    padding: var(--half-gap);
+    border: none;
+    border-radius: var(--small-radius);
+    background: url('../../images/bg-shorten-mobile.svg') var(--dark-violet) no-repeat;
+    background-position: center center;
+    position: absolute;
+    top: -50%;
+}
+
+/*
+    Even though is visually-hidden,
+    WAVE still accuses contrast error
+    in the default color
+*/
+.shorten-form label
+{
+    color: var(--white);
+}
+
+.input-container
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex: 1;
+}
+
+.shorten-url-input, .submit-button
+{
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: var(--base-font-size);
+}
+
+.shorten-url-input
+{
+    width: var(--maximum-width);
+    text-align: left;
+}
+
+.submit-button
+{
+    height: var(--main-gap);
+    background-color: var(--cyan);
+    font-weight: var(--heavy-font);
+}
+
+.error-message
+{
+    display: block;
+    color: var(--error-color);
+    font-size: var(--base-font-size);
+    text-align: left;
+}
+
+.links-output
+{
+    width: calc(var(--maximum-width) - 7%);
+    display: flex;
+    flex-direction: column;
+    gap: var(--half-gap);
+    padding: var(--half-gap);
+    margin-top: var(--main-gap);
+    border: none;
+
+    position: absolute;
+    top: 300%
+}
+
+.shortened-link-item
+{
+    width: var(--maximum-width);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--half-gap);
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--white);
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.115);
+}
+
+.shortened-link-container
+{
+    display: flex;
+    flex-direction: column;
+    gap: var(--half-gap);
+    width: var(--maximum-width);
+}
+
+.shortened-link
+{
+    color: var(--dark-violet);
+}
+
+.copy-button
+{
+    background-color: var(--cyan);
+    color: var(--contrast-text-color);
+    padding: 1rem var(--half-gap);
+    font-size: var(--base-font-size);
+    font-weight: var(--heavy-font);
+    border: none;
+    border-radius: 0.5rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.statistics
+{
+    padding-top: calc(var(--main-gap) * 4);
+    background-color: var(--bright-violet);
+    transition: padding-top 0.3s ease-in-out;
+}
+
+.statistics h2
+{
+    margin-top: calc(var(--main-gap) * 2);
+}
+
+.statistics p
+{
+    color: var(--contrast-text-color);
+}
+
+.statistics-cards
+{
+    width: var(--maximum-width);
+    display: flex;
+    flex-direction: column;
+    gap: var(--main-gap);
+    margin-top: var(--main-gap);
+}
+
+.card
+{
+    position: relative;
+    margin: var(--main-gap) auto;
+    border: none;
+    border-radius: var(--small-radius);
+    background-color: var(--white);
+}
+
+.card img
+{
+    position: absolute;
+    top: -4rem;
+    left: 50%;
+    border: none;
+    padding: var(--half-gap);
+    border-radius: 50%;
+    background-color: var(--dark-violet);
+    transform: translateX(-50%);
+}
+
+.card h3
+{
+    margin: calc(var(--main-gap) * 2) auto var(--half-gap) auto;
+}
+
+.card p
+{
+    max-width: 30ch;
+    margin: 0 auto;
+    margin-bottom: var(--half-gap);
+    padding: 0 1rem;
+}
+
+.cta
+{
+    justify-content: center;
+    background: url('../../images/bg-boost-mobile.svg') var(--dark-violet) no-repeat;
+    background-position: center center;
+}
+
+.cta h2
+{
+    color: var(--white);
+    margin-top: var(--main-gap);
+}
+
+.cta .button-primary
+{
+    margin-bottom: var(--main-gap);
+}
