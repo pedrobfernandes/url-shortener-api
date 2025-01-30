@@ -51,8 +51,7 @@ const getShortenUrl = async (toShorten, errorMessage) =>
     catch (error)
     {
         console.error('Error: ', error.message || error);
-        errorMessage.textContent = `Error: Failed to shorten URL. Status: 400,
-            Details: {"UrlError":"Invalid URL, URL must have a valid protocol}`;
+        errorMessage.textContent = 'Error: Invalid URL';
     }
 };
 
