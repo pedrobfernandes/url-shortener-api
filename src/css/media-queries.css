@@ -152,8 +152,6 @@
         margin-bottom: 0;
     }
 
-    
-
     .shorten-form
     {
         top: 100%;
@@ -164,6 +162,57 @@
     .statistics-cards
     {
         flex-direction: row;
+        justify-content: center;
+        padding-bottom: calc(var(--main-gap) * 2);
+        /* align-items: flex-start; */
+    }
+
+    /* .card:nth-child(1) */
+    /* { */
+        /* align-self: flex-start; */
+
+    /* } */
+
+    /* .card:nth-child(2) */
+    /* { */
+        /* align-self: center; */
+
+
+    /* } */
+
+    /* .card:nth-child(3) */
+    /* { */
+        /* align-self: flex-end; */
+    /* } */
+
+    .card
+    {
+        text-align: left;
+    }
+
+    .card h3, .card p
+    {
+        padding-left: 1.2rem;
+    }
+
+    .card:nth-child(1)
+    {
+        top: 0;
+    }
+
+    .card:nth-child(2)
+    {
+        top: var(--main-gap)
+    }
+
+    .card:nth-child(3)
+    {
+        top: calc(var(--main-gap) * 2);
+    }
+
+    .card img
+    {
+        left: 20%;
     }
 
     .cta
