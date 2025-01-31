@@ -3,7 +3,9 @@
 
     .nav-links-container
     {
-        width: calc(var(--maximum-width) - 30%);
+        width: calc(var(--maximum-width) - 50%);
+        top: 6%;
+        left: 70%;
     }
 
     .intro-content p,

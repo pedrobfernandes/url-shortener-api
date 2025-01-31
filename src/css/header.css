@@ -30,7 +30,7 @@ nav
 .nav-links-container
 {
     position: absolute;
-    top: 7%;
+    top: 10%;
     left: 50%;
     display: flex;
     flex-direction: column;
@@ -94,5 +94,5 @@ nav
 
 .signup
 {
-    width: 90%;
+    width: 80%;
 }
