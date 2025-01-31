@@ -46,7 +46,7 @@ const calculateStatisticsPadding = (urls, parentContainer) =>
 {
     const containerHeight = parentContainer.offsetHeight;
 
-    // times 10 because in html we have font-size: 62.5% 
+    // divided by 10 because in html we have font-size: 62.5% 
     return(urls === 0 ? 12 : (containerHeight / 10) + 8);
 };
 
