@@ -125,7 +125,7 @@ main
     border: none;
 
     position: absolute;
-    top: 300%
+    top: 300%;
 }
 
 .shortened-link-item
@@ -141,6 +141,15 @@ main
     border-radius: 0.5rem;
     background-color: var(--white);
     box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.115);
+    opacity: 0;
+    transform: translateY(2rem);
+    transition: opacity 0.5s ease, transfom 0.5s ease;
+}
+
+.shortened-link-item.visible
+{
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .shortened-link-container
@@ -173,7 +182,7 @@ main
 {
     padding-top: calc(var(--main-gap) * 4);
     background-color: var(--bright-violet);
-    transition: padding-top 0.3s ease-in-out;
+    transition: padding-top 0.5s ease-in-out;
 }
 
 .statistics h2

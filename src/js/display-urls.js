@@ -48,6 +48,11 @@ const displayUrlHistory = () =>
         linkElement.appendChild(shortenedLinkContainer);
 
         linksOutput.appendChild(linkElement);
+
+        setTimeout(() =>
+        {
+            linkElement.classList.add('visible');
+        }, 100);
     });
 
     createCopyButtons(document.querySelectorAll('.copy-button'));
@@ -57,3 +62,16 @@ const displayUrlHistory = () =>
     
     window.addEventListener('resize', () => updatePadding(numberUrls, statisticsSection, linksOutput));
 };
+
+
+document.addEventListener('DOMContentLoaded', () =>
+{
+    const urlHistory = JSON.parse(localStorage.getItem('urlHistory')) || [];
+    const numberUrls = urlHistory.length;
+    updatePadding(numberUrls, statisticsSection, linksOutput);
+
+    setTimeout(() =>
+    {
+       displayUrlHistory(); 
+    }, 1000);
+});
