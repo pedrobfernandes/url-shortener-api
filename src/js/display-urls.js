@@ -52,8 +52,8 @@ const displayUrlHistory = () =>
 
     createCopyButtons(document.querySelectorAll('.copy-button'));
 
-    const numberUrls = urlHistory.lenght;
-
+    const numberUrls = urlHistory.length;
     updatePadding(numberUrls, statisticsSection, linksOutput);
+    
     window.addEventListener('resize', () => updatePadding(numberUrls, statisticsSection, linksOutput));
 };

@@ -26,6 +26,13 @@ const createCopyButtons = copyButtons =>
             button.style.backgroundColor = 'rgb(59, 48, 84)';
             button.style.color = 'rgb(255, 255, 255)';
             button.textContent = 'Copied!';
+
+            setTimeout(() =>
+            {
+                button.style.backgroundColor = 'rgb(42, 207, 207)';
+                button.style.color = 'rgb(71, 70, 73)';
+                button.textContent = 'Copy';
+            }, 3000);
         });
     });
 };
@@ -53,6 +60,7 @@ const calculateStatisticsPadding = (urls, parentContainer) =>
 
 const updatePadding = (numberUrls, statisticsSection, linksOutput) =>
 {
+    
     const newPaddingTop = calculateStatisticsPadding(numberUrls, linksOutput);
     statisticsSection.style.paddingTop = `${newPaddingTop}rem`;
 };
